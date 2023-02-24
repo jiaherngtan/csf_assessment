@@ -1,0 +1,40 @@
+<h1>Restaurant Details</h1>
+
+<div *ngIf="restaurant">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>{{ restaurant.name }}</td>
+        </tr>
+        <tr>
+            <td>Cuisine:</td>
+            <td>{{ restaurant.cusisine }}</td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td>{{ restaurant.address }}</td>
+        </tr>
+    </table>
+    <img src="{{this.imageUrl}}">
+</div>
+
+<h4>Comment</h4>
+<div class="box-it">
+    <form [formGroup]="form" (ngSubmit)="processForm()">
+        <table>
+            <tr>
+                <td><label for="name">Name:</label> </td>
+                <td><input type="text" size="50" id="name" placeholder="Your name" formControlName="name"></td>
+            </tr>
+            <tr>
+                <td><label for="rating">Rating:</label> </td>
+                <td><input type="number" size="50" min="1" max="5" id="rating" formControlName="rating"></td>
+            </tr>
+        </table>
+        <textarea id="text" cols="40" rows="5" placeholder="Type here" formControlName="text"></textarea>
+        <div>
+            <button type="button">Back</button>
+            <button type="submit" [disabled]="form.invalid">Submit</button>
+        </div>
+    </form>
+</div>

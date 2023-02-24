@@ -1,0 +1,6 @@
+TODO: Task 1 - Write the mongo import command here
+mongoimport --drop --host=containers-us-west-29.railway.app --port=6149 --db=csf --collection=restaurants --jsonArray /Users/jiaherngtan/Downloads/csf/csf-assessment-template/restaurants.json --authenticationDatabase=admin
+mongoimport --drop --host=localhost --port=27017 --db=csf --collection=restaurants --jsonArray /Users/jiaherngtan/Downloads/csf/csf-assessment-template/restaurants.json --authenticationDatabase=admin
+
+mongoimport --uri "mongodb://jh:jh123456@atlas-host1:27017,atlas-host2:27017,atlas-host3:27017/<DATABASE>?ssl=true&replicaSet=myAtlasRS&authSource=admin" --collection myData --drop --file /somedir/myFileToImport.json
+mongoimport --uri mongodb+srv://jh:jh123456@jh-cluster.l68dk0c.mongodb.net/csf --collection restaurants --file /Users/jiaherngtan/Downloads/csf/csf-assessment-template/restaurants.json

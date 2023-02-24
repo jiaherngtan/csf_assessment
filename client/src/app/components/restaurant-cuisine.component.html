@@ -1,0 +1,6 @@
+<h1>List of {{ this.cuisine }} Cuisines</h1>
+
+<div *ngFor="let r of restaurants" class="restaurants" [routerLink]="['/restaurant', r.restaurantId]">
+    <h4>{{ r.name }}</h4>
+</div>
+<button type="button" [routerLink]="['/']">Back</button>
